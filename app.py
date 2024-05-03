@@ -10,7 +10,9 @@ def home():
 
 @app.route('/track', methods=['POST'])
 def track_data():
-    data = request.json
+    print(request.headers)
+    print(request.data)
+    data = request.get_json()
     return jsonify({"status": "success", "data": data}), 200
 
 @app.route('/query', methods=['GET'])

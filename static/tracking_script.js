@@ -1,7 +1,7 @@
 (function() {
     var sendData = function(data) {
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://yourdomain.com/track", true);
+        xhr.open("POST", "http://localhost:8080/track", true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify(data));
     };
